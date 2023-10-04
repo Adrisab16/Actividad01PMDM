@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Actividad01PMDM</string>
     <string name="Pulsabtn">Pulsa el botón!</string>
-    <string name="pulsar">Púlsame</string>
+    <string name="title">Actividad 01</string>
+    <string name="aceptar">Aceptar</string>
 </resources>
