@@ -3,4 +3,7 @@
     <string name="Pulsabtn">Pulsa el botón!</string>
     <string name="title">Actividad 01</string>
     <string name="aceptar">Aceptar</string>
+    <string name="First_msg">¡Has hecho click una vez!</string>
+    <string name="Second_msg">¡Has hecho click dos veces!</string>
+    <string name="MuchosClicks_msg">¡Te has pasado de clicks!</string>
 </resources>

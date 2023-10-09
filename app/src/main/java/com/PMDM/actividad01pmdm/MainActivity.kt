@@ -1,6 +1,5 @@
 package com.PMDM.actividad01pmdm
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,7 +10,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textView: TextView
     private var clickCount = 0
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,23 +25,23 @@ class MainActivity : AppCompatActivity() {
                 textView.textSize = 24F
                 when(clickCount){
                     1->{
-                        // Mensaje TextView cuando clickCount = 1
-                        textView.text = "¡Has hecho click una vez!"
+                        // Mensaje TextView cuando clickCount = 1, obteniendolo de strings.xml
+                        textView.text = getString(R.string.First_msg)
                     }
                     2->{
-                        // Mensaje TextView cuando clickCount = 1
-                        textView.text = "¡Has hecho click dos veces!"
+                        // Mensaje TextView cuando clickCount = 1, obteniendolo de strings.xml
+                        textView.text = getString(R.string.Second_msg)
                     }
                 }
                 if (clickCount in 3..5){
-                    // Desde
-                    textView.text = "¡Has hecho click $clickCount veces!"
+                    // Mensaje TextView desde 3er hasta 5o click
+                    "¡Has hecho click $clickCount veces!".also { textView.text = it }
                 }
             }
             else{
                 //Tamaño y texto cambiado cuando clickCount >= 5
                 textView.textSize = 22F
-                textView.text = "¡Has hecho click varias veces ($clickCount)"
+                "¡Has hecho click varias veces! ($clickCount)".also { textView.text = it }
 
                 // Implementación de la funcionalidad requerida cuando clickCount >=10
                 if (clickCount >= 10){
@@ -52,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                     // Creamos mensaje toast
                     Toast.makeText(this, "El botón ha sido desactivado", Toast.LENGTH_SHORT).show()
                     // Mensaje TextView
-                    textView.text = "¡Te has pasado de clicks!"
+                    textView.text = getString(R.string.MuchosClicks_msg)
                 }
             }
             /*
