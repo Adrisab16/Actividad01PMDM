@@ -55,15 +55,11 @@ class MainActivity : AppCompatActivity() {
                     textView.text = "¡Te has pasado de clicks!"
                 }
             }
-
-
-
-
-
             /*
-            * Se podría hacer de una forma mucho más simplificada de la siguiente forma:
+            * La parte del mensaje con el contador de números deel 1 al 5
+            * se podría hacer de una forma mucho más simplificada de la siguiente forma:
             *
-            * if (clickCount < 5){
+            * if (clickCount <= 5){
                 textView.text = "¡Has hecho click $clickCount veces!"
                 textView.textSize = 24F
             }
